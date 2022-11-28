@@ -1,0 +1,674 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+::-webkit-scrollbar-thumb {
+    color: var(--always-light-black);
+}
+input {
+    background-color: transparent;
+}
+ /* colors */
+:root {
+    --always-white:#FFFFFF;
+    --always-light-white: #F0F0F0;
+    --always-blue: #4267B2;
+    --always-dark-blue: #216fdb;
+    --always-gray:#898F9C;
+    --always-black:#000000;
+    --always-light-black:#303030;
+    --always-green: #00a400;
+    --always-dark-green: #31a24c;
+    --always-red: #fa383e;
+    --always-orange: #f5c33b;
+}
+
+.blue {
+    color: var(--always-dark-blue) ;
+}
+.red {
+    color: var(--always-red) ;
+}
+.orange {
+    color: var(--always-orange);
+}
+.green {
+    color: var(--always-green);
+}
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins' , sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    top: 0;
+    padding: 0px 17px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: var(--always-white);
+    z-index: 200;
+}
+
+header img {
+    width: 38px;
+    height:38px;
+    border-radius: 50%;
+    cursor: pointer;
+    align-self: center;
+}
+header i {
+    font-size: 23px;
+}
+header .left-header , header .right-header {
+    display: flex;
+    align-items: center;
+}
+header .left-header i{
+    font-size: 15px;
+}
+header .left-header form {
+    margin-left: 10px;
+    border-radius: 25px;
+    background-color: var(--always-light-white);
+    padding: 6px 12px;
+}
+header .left-header form input {
+    font-size: 15px;
+}
+header .middle-header {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    color: var(--always-light-black);
+    margin-right: 73px;
+}
+header .middle-header i {
+    padding: 0px 40px 20px;
+    margin: 0px 8px;
+    cursor: pointer;
+}
+header .middle-header .active {
+    color: var(--always-dark-blue);
+    border-bottom: 3px solid currentColor;
+}
+header .right-header i , header .right-header span{
+    margin: 0px 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: var(--always-light-white);
+    padding: 10px;
+    color: var(--always-black);
+}
+
+
+
+
+
+
+/* main */
+main {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--always-light-white);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+main .facebook-desktop-sidebar {
+    width: 21%;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    display: block;
+    align-self: flex-start;
+    padding: 20px 0px 70px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: var(--always-light-white);
+}
+main .facebook-desktop-sidebar:hover {
+    overflow-y: scroll;
+}
+.facebook-desktop-sidebar nav {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+.facebook-desktop-sidebar .user-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.facebook-desktop-sidebar nav li {
+    list-style: none;
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.facebook-desktop-sidebar nav a:hover {
+    background-color: var(--always-white);
+    border-radius: 6px;
+}
+.facebook-desktop-sidebar nav li a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.facebook-desktop-sidebar nav li b{
+    font-size: 13px;
+    font-weight: 600;
+    align-self: center;
+    letter-spacing: 1px;
+}
+
+.facebook-desktop-sidebar nav li i{
+    width: 40px;
+    font-size: 21px;
+}
+
+.facebook-desktop-sidebar li .blue{
+    color: var(--always-dark-blue);
+}
+
+.facebook-desktop-sidebar li .red{
+    color: var(--always-red);
+}
+
+
+
+
+/* post section */
+main .facebook-post-section {
+    margin-left: 30% !important;
+    width: 40%;
+    height: auto;
+    display: block;
+    align-self: flex-start;
+    margin: 20px 0% 0px 0%;
+    border-radius: 10px;
+    background-color: var(--always-light-white);
+}
+
+main .facebook-post-section .header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--always-gray);
+    background-color: var(--always-white);
+}
+
+.facebook-post-section .header li {
+    padding: 20px 40px;
+    margin: 0px 10px;
+    list-style: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.facebook-post-section .header .active {
+    color: var(--always-dark-blue);
+    border-bottom: 3px solid currentColor;
+}
+
+
+.facebook-post-section .facebook-story-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-top: 10px;
+    overflow-x: scroll;
+    background-color: var(--always-white);
+    border-bottom: 20px solid var(--always-light-white);
+}
+.facebook-post-section .facebook-story-container::-webkit-scrollbar {
+    display: none;
+}
+.facebook-story-container .fb-story-box {
+    width: 128px;
+    min-width: 123px;
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px;
+}
+.facebook-story-container .fb-story-box  .user-full-pic {
+    width: 100%;
+    height: 140px;
+    background-color: var(--always-black);
+}
+
+.facebook-story-container .fb-story-box .fa-circle-plus {
+    position: absolute;
+    border-radius: 50%;
+    color: var(--always-dark-blue);
+    background-color: var(--always-white);
+    border: 4px solid var(--always-white);
+    top: 120px;
+    left: 40px;
+    z-index: 2;
+    font-size: 33px;
+}
+
+.facebook-story-container .fb-story-box small {
+    position: absolute;
+    bottom: 15px;
+    left:30px ;
+    z-index: 2;
+    font-size: 12px;
+    font-family: 700;
+    text-align: center;
+}
+
+.facebook-story-container .fb-story-box .story-post{
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+}
+
+.facebook-story-container .fb-story-box .user-logo{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 3px solid var(--always-dark-blue);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.facebook-story-container .fb-story-box .user-name{
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    color: var(--always-white);
+    font-size: 13px;
+    font-weight: 520;
+    z-index: 5;
+}
+
+.facebook-post-section .facebook-add-post-box {
+    width: 100%;
+    height: auto;
+    background-color: var(--always-white);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.facebook-add-post-box .box-1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.facebook-add-post-box .box-1 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.facebook-add-post-box .box-1 input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    background-color: var(--always-light-white);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.facebook-add-post-box .box-2 {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.facebook-add-post-box .box-2 li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+.facebook-add-post-box .box-2 li:hover {
+    background-color: var(--always-light-white);
+    border-radius: 10px;
+}
+.facebook-add-post-box .box-2 i{
+    width: 30px;
+    font-size: 20px;
+}
+
+
+/* single post */
+article {
+    width: 100%;
+    height: auto;
+    margin: 20px 0px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--always-white);
+}
+article .top-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+article .top-header i {
+    cursor: pointer;
+}
+article .top-header small {
+    font-size: 12px;
+}
+article .top-header .flex{
+    display: flex;
+    align-items: center;
+}
+article .top-header .block{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+}
+article .user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 3px solid var(--always-light-white);
+}
+article .top-header b {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+article .user-text-post {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--always-black);
+}
+
+article .user-post-holder {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+article .user-post-holder img {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+}
+
+article .user-post-holder video , article .user-post-holder iframe{
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    background-color: var(--always-black);
+}
+
+article .post-reaction-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--always-gray);
+}
+article .post-reaction-count a {
+    font-size: 13px;
+}
+article .post-reaction-count i {
+    cursor: pointer;
+}
+article .post-reaction-count a:hover {
+    text-decoration: underline;
+}
+article .post-reaction-count .fa-face-laugh-beam , article .post-reaction-count .fa-face-dizzy {
+    background-color: var(--always-black);
+    border-radius: 50%;
+}
+
+
+
+article .post-reaction-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 0px;
+}
+
+article .post-reaction-button li {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 25px;
+}
+article .post-reaction-button li:hover {
+    background-color: var(--always-light-white);
+    border-radius: 4px;
+}
+article .post-reaction-button i {
+    width: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* side section */
+main .facebook-side-section {
+    right: 0px;
+    position: fixed;
+    width: 25%;
+    height: 100vh;
+    display: block;
+    align-self: flex-start;
+    padding: 20px 0px 70px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--always-light-white);
+}
+main .facebook-side-section::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+}
+.facebook-side-section nav {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+.facebook-side-section .user-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.facebook-side-section nav li {
+    list-style: none;
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.facebook-side-section nav a:hover {
+    background-color: var(--always-white);
+    border-radius: 6px;
+}
+.facebook-side-section nav li a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.facebook-side-section nav li b{
+    font-size: 13px;
+    font-weight: 600;
+    align-self: center;
+    letter-spacing: 1px;
+}
+
+.facebook-side-section nav li i{
+    width: 40px;
+    font-size: 21px;
+}
+
+.facebook-side-section li .blue{
+    color: var(--always-dark-blue);
+}
+
+.facebook-side-section li .red{
+    color: var(--always-red);
+}
+
+
+
+
+
+/* responsive design */
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 60px;
+        padding: 0px 10px;
+    }
+
+    header .left-header form {
+       display: none;
+    }
+
+    header .middle-header {
+        margin-right: 0px;
+        display: none;
+    }
+
+    header .right-header span {
+       display: none;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    main .facebook-desktop-sidebar {
+        width: 78%;
+        height: 100vh;
+        position: fixed;
+        left: 0px;
+        display: none;
+        padding: 20px 0px 20px;
+        overflow-y: scroll;
+    }
+
+    main .facebook-post-section {
+        margin-left: 0% !important;
+        margin-top: 0px;
+        width: 100%;
+        border-radius: 1px;
+        padding-top: 0px ;
+    }
+    .facebook-post-section .facebook-story-container {
+        padding-left: 10px;
+        padding-top: 10px;
+        border-bottom: 0px;
+    }
+
+    .facebook-post-section .facebook-add-post-box {
+        border-radius: 1px;
+        padding: 10px 10px;
+    }
+
+    .facebook-add-post-box .box-2 {
+        padding: 0px 0px;
+    }
+
+    .facebook-add-post-box .box-2 li {
+        padding: 10px 5px;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    main .facebook-post-section .header {
+        display: none;
+    }
+
+    article {
+        margin: 10px 0px;
+        padding: 10px 7px;
+        border-radius: 1px;
+    }
+
+    article .user-post-holder {
+        width: 100%;
+    }
+
+    article .user-post-holder img {
+        width: 100%;
+        max-height: 600px;
+    }
+
+    article .user-post-holder video{
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+
+    article .post-reaction-count {
+        padding: 10px 10px;
+        border-bottom: 1px solid var(--always-gray);
+    }
+
+
+
+
+
+    main .facebook-side-section {
+        right: 0px;
+        position: fixed;
+        width: 100%;
+        display: none;
+        padding: 20px 0px 20px;
+    }
+}
